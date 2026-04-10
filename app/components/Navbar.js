@@ -4,7 +4,7 @@ export default function Navbar () {
 
   return (
     <>
-    <div className="py-6 flex items-center bg-secondary border-b-6 border-primary text-primary text-3xl">
+    <nav className="sticky top-0 z-50 py-5 flex items-center bg-secondary border-b-6 border-primary text-primary text-2xl">
       <a className="pl-6" href="#">
         <Image 
         src={"/images/VNHHCLOGO.png"}
@@ -13,14 +13,14 @@ export default function Navbar () {
         height={100}
         />
       </a>
-      <nav className="flex flex-1 justify-around font-bold">
-        <a href="#">About Us</a>
+      <div className="flex flex-1 justify-around font-bold">
+        <a href="#aboutUs" className="margin">About Us</a>
         <a href="#">Provided Services</a>
         <a href="#">Insurance Information</a>
         <a href="#">Contact Form</a>
         <a href="#">Frequently Asked Questions</a>
-      </nav>
-    </div>
+      </div>
+    </nav>
     </>
   );
 };

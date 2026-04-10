@@ -18,3 +18,21 @@ body {
 section[id] {
   scroll-margin-top: 5rem;
 }
+
+
+.logo-title {
+  font-weight: 900;
+  font-style: italic;
+  padding-bottom: 150px;
+};
+
+
+.section-padding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+};
+
+
+.nonselected-subsec {
+  color: gray;
+}
