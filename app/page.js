@@ -1,8 +1,16 @@
 // import Image from "next/image";
 
+import AboutSection from "./components/AboutSection";
+import HomeAnchor from "./components/HomeAnchor";
+
 export default function Home() {
   return (
-    <div>Placeholder Div</div>
+    <>
+      <HomeAnchor/>
+      <AboutSection/>
+    </>
+
+
     // <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark">
     //   <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
     //     <Image
