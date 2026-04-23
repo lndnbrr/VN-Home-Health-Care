@@ -2,12 +2,14 @@
 
 import AboutSection from "./components/AboutSection";
 import HomeAnchor from "./components/HomeAnchor";
+import ServiceSection from "./components/ServicesSection";
 
 export default function Home() {
   return (
     <>
       <HomeAnchor/>
       <AboutSection/>
+      <ServiceSection/>
     </>
 
 

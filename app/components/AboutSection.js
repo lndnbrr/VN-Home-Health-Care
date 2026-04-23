@@ -1,10 +1,10 @@
 'use client'
 
 import { useState } from "react"
-import OurStory from "./aboutSubSections/OurStory";
-import MeetTheTeam from "./aboutSubSections/MeetTheTeam";
-import Mission from "./aboutSubSections/Mission";
-import Goals from "./aboutSubSections/Goals";
+import OurStory from "./aboutSubsections/OurStory";
+import MeetTheTeam from "./aboutSubsections/MeetTheTeam";
+import Mission from "./aboutSubsections/Mission";
+import Goals from "./aboutSubsections/Goals";
 
 export default function AboutSection () {
 
@@ -19,7 +19,7 @@ export default function AboutSection () {
 
   return (
     <>
-      <div id="aboutUs" className="flex text-4xl section-padding">
+      <section id="aboutUs" className="flex text-4xl mbl-section-padding sm:sm-section-padding lg:lg-section-padding">
         <div className="flex flex-col flex-1 justify-center"> 
           <div className="flex justify-center text-[5vw]">
             <h1 className="font-bold underline text-primary">About Us</h1>
@@ -39,7 +39,7 @@ export default function AboutSection () {
             ))
           }
         </div>
-      </div>
+      </section>
 
     </>
   )
