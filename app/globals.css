@@ -23,11 +23,25 @@ section[id] {
 .logo-title {
   font-weight: 900;
   font-style: italic;
-  padding-bottom: 150px;
 };
 
 
-.section-padding {
+.mbl-section-padding {
+  padding-top: 10px;
+  padding-bottom: 10px;
+};
+
+.sm-section-padding {
+  padding-top: 30px;
+  padding-bottom: 30px;
+};
+
+.md-section-padding {
+  padding-top: 60px;
+  padding-bottom: 60px;
+};
+
+.lg-section-padding {
   padding-top: 100px;
   padding-bottom: 100px;
 };
