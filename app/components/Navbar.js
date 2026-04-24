@@ -17,7 +17,7 @@ export default function Navbar () {
       <div className="flex flex-1 justify-around font-bold">
         <a href="#aboutUs" className="ml-2 text-center">About Us</a>
         <a href="#services" className="text-center">Provided Services</a>
-        <a href="#" className="text-center">Insurance Information</a>
+        <a href="#insuranceInfo" className="text-center">Insurance Information</a>
         <a href="#" className="text-center">Contact Form</a>
         <a href="#" className="text-center">Frequently Asked Questions</a>
       </div>

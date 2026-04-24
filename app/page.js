@@ -1,7 +1,6 @@
-// import Image from "next/image";
-
 import AboutSection from "./components/AboutSection";
 import HomeAnchor from "./components/HomeAnchor";
+import InsuranceInfo from "./components/InsuranceInfo";
 import ServiceSection from "./components/ServicesSection";
 
 export default function Home() {
@@ -10,6 +9,7 @@ export default function Home() {
       <HomeAnchor/>
       <AboutSection/>
       <ServiceSection/>
+      <InsuranceInfo/>
     </>
 
 
