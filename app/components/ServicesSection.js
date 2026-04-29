@@ -5,7 +5,7 @@ import SkilledNursing from "./servicesSubsections/SkilledNursing";
 export default function ServiceSection(){
   return(
     <>
-      <section id="services" className="section-padding">
+      <section id="services" className="mbl-section-padding sm:sm-section-padding md:md-section-padding lg:lg-section-padding">
         <h1 className="flex justify-center font-bold underline text-primary text-[5vw]">Provided Services</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">  
           <SkilledNursing/>

@@ -1,7 +1,7 @@
 export default function InsuranceInfo() {
   return (
     <>
-    <section id="insuranceInfo" className="section-padding pr-2 pl-2 flex flex-col">
+    <section id="insuranceInfo" className="mbl-section-padding sm:sm-section-padding md:md-section-padding lg:lg-section-padding pr-2 pl-2 flex flex-col">
       <h1 className="flex justify-center font-bold underline text-primary text-[5vw]">Insurance Information</h1>
       <div className="self-center text-primary text-[15px] sm:text-[35px] md:text-[40px] lg:text-[50px] border border-4 p-3 w-full sm:w-[600px] md:w-[750px] lg:w-[1200px]">
         <h3 className="underline text-center">Accepted In-Network Insurance Options:</h3>
