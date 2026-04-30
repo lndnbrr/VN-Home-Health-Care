@@ -18,7 +18,7 @@ export default function MeetTheTeam () {
   return (
     <>
       <div className="flex">
-        <button onClick={()=> emblaApi?.scrollPrev()} className="pr-1 text-primary-dark">&#8592;</button>
+        <button onClick={()=> emblaApi?.scrollPrev()} className="pr-1 text-primary-dark">&#x25c0;</button>
         <div ref={emblaRef} className="w-[400px] max-h-[500px] overflow-hidden">
           <div className="flex">
             {
@@ -41,7 +41,7 @@ export default function MeetTheTeam () {
             }
           </div>
         </div>
-        <button onClick={()=> emblaApi?.scrollNext()} className="pl-1 text-primary-dark">&#8594;</button>
+        <button onClick={()=> emblaApi?.scrollNext()} className="pl-1 text-primary-dark">&#9654;</button>
       </div>
     </>
   );

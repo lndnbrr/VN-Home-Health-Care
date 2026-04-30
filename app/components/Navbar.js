@@ -19,7 +19,7 @@ export default function Navbar () {
         <a href="#services" className="text-center">Provided Services</a>
         <a href="#insuranceInfo" className="text-center">Insurance Information</a>
         <a href="#" className="text-center">Contact Form</a>
-        <a href="#" className="text-center">Frequently Asked Questions</a>
+        <a href="#faq" className="text-center">Frequently Asked Questions</a>
       </div>
     </nav>
     </>
