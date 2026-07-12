@@ -1,4 +1,5 @@
 import AboutSection from "./components/AboutSection";
+import ContactForm from "./components/ContactForm";
 import FAQ from "./components/FAQ";
 import HomeAnchor from "./components/HomeAnchor";
 import InsuranceInfo from "./components/InsuranceInfo";
@@ -11,6 +12,7 @@ export default function Home() {
       <AboutSection/>
       <ServiceSection/>
       <InsuranceInfo/>
+      <ContactForm/>
       <FAQ/>
     </>
 
