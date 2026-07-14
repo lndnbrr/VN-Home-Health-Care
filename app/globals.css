@@ -1,4 +1,6 @@
 @import "tailwindcss";
+/* plugin for tailwindcss in the CSS file to customize form elements (removes native default browser appearance) */
+@plugin "@tailwindcss/forms";
 
 @theme inline {
   --color-primary: #4a1e22 ;

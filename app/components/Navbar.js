@@ -18,7 +18,7 @@ export default function Navbar () {
         <a href="#aboutUs" className="ml-2 text-center">About Us</a>
         <a href="#services" className="text-center">Provided Services</a>
         <a href="#insuranceInfo" className="text-center">Insurance Information</a>
-        <a href="#" className="text-center">Contact Form</a>
+        <a href="#contact" className="text-center">Contact Form</a>
         <a href="#faq" className="text-center">Frequently Asked Questions</a>
       </div>
     </nav>
