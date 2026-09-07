@@ -1,37 +1,23 @@
 'use client'
 
-// useActionState handles form action attributes, response management, and submission verification simultaneously
-// useState handles state of user input
-// useEffect handles change of state for useState
-import { useActionState, useState, useEffect } from "react"
-
-// Server action that validates and processes the submitted form
+import { useActionState, useState } from "react"
 import { submitContactForm } from "../actions"
 
-// Object representation of form input request structure (currrently initial state)
 let initReqState = { message: "", success: null, errors: {} };
-
-// Object representation of user input state (currrently initial state)
 let initInputState = { name: "", email: "", phone: "", message: "" };
 
 export default function ContactForm() {
-  // Declaring useActionState. Utilizing the current state, form action trigger, and loading indicators
+
   const [state, formAction, isPending] = useActionState(submitContactForm, initReqState);
-
-  // Stores state of user input
   const [vals, setVals] = useState(initInputState);
-
-  // Monitors the current state of the success/unsuccess response
   const [prevSuccess, setPrevSuccess] = useState(state.success)
 
-  // Function that preserves previous state of form input upon unsuccessful submission
   function handleChange (e) {
     setVals((prev) => (
       {...prev, [e.target.name]: e.target.value}
     ));
   };
 
-  // If conditions that checks state.success boolean. If null, do nothing. If false, change prevSuccess to false and continue (if applicable). If true, change prevSuccess to true (if applicable), and run next condition, setting values back to empty strings.
   if (state.success !== prevSuccess) {
     setPrevSuccess(state.success);
     if (state.success) {
@@ -42,38 +28,36 @@ export default function ContactForm() {
   };
 
   return (
-    // section container for navbar routing 
-    <section id="contact">
+    <section id="contact" className="mbl-section-padding sm:sm-section-padding md:md-section-padding lg:lg-section-padding pr-2 pl-2">
        <h2 className="flex justify-center font-bold underline text-primary text-[5vw]">Contact Form</h2>
-       <div className="border p-5 m-2">
-
-        {/* form with action that grabs named inputs and updates the state of submitContactForm */}
+       <div className="w-[75%] mx-auto border-2 border-primary rounded-2xl p-5">
         <form action={formAction} className="flex flex-col">
-          <label>Name</label>
-          <input className="text-[12px] sm:text-[20px] md:text-[25px] lg:text-[35px] w-[60%] sm:w-[50%]" name="name" id="name" value={vals.name} onChange={handleChange} type="text"/>
+          <label className="font-bold text-primary mt-2">Name</label>
+          <input className="w-[40%] text-sm sm:text-base md:text-lg border border-primary-dark rounded-md px-3 py-2" name="name" id="name" value={vals.name} onChange={handleChange} type="text"/>
 
-          <label>Email Address</label>
-          <input className="text-[12px] sm:text-[20px] md:text-[25px] lg:text-[35px] w-[60%] sm:w-[50%]" name="email" id="email" value={vals.email} onChange={handleChange} type="email"/>
+          <label className="font-bold text-primary mt-2">Email Address</label>
+          <input className="w-[40%] text-sm sm:text-base md:text-lg border border-primary-dark rounded-md px-3 py-2" name="email" id="email" value={vals.email} onChange={handleChange} type="email"/>
 
-          <label>Phone Number</label>
-          <input className="text-[12px] sm:text-[20px] md:text-[25px] lg:text-[35px] w-[50%] sm:w-[40%]" name="phone" id="phone" value={vals.phone} onChange={handleChange} type="tel"/>
+          <label className="font-bold text-primary mt-2">Phone Number</label>
+          <input className="w-[30%] text-sm sm:text-base md:text-lg border border-primary-dark rounded-md px-3 py-2" name="phone" id="phone" value={vals.phone} onChange={handleChange} type="tel"/>
 
-          <label>Message</label>
-          <textarea className="text-[12px] sm:text[20px] md:text-[25px] lg:text-[35px] lg:leading-[1] h-[200px]" name="message" id="message" value={vals.message} onChange={handleChange} type="text"/>
+          <label className="font-bold text-primary mt-2">Message</label>
+          <textarea className="w-full text-sm sm:text-base md:text-lg border border-primary-dark rounded-md px-3 py-2 h-[200px]" name="message" id="message" value={vals.message} onChange={handleChange} type="text"/>
 
-          {/* Submission button for form. Toggle phrase display during submission process */}
-          <button className="pt-4" type="submit" disabled={isPending}>
+          <p className="text-sm text-primary pt-4 pl-1">
+            We speak English, Spanish, Arabic, Filipino, Russian, Hindi, Gujarati, Marwadi, and Tamil.
+          </p>
+
+          <button className="w-[80%] sm:w-auto self-center mt-4 px-6 py-2 bg-primary text-white rounded-md disabled:opacity-50" type="submit" disabled={isPending}>
             {isPending ? "Processing Request..." : "Send"}
           </button>
 
-          {/* If message response exists, provide the current state's message response */}
           <div>
             {state?.message  && (
               <p>{state.message}</p>
             )}
           </div>
 
-          {/* If any errors exist, display the error for that input */}
           <div>
             {state?.errors?.name && <p style={{color:"red"}}>&#10008; {state.errors.name}</p>}
             {state?.errors?.email && <p style={{color:"red"}}>&#10008; {state.errors.email}</p>}
