@@ -1,26 +1,87 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* plugin for tailwindcss in the CSS file to customize form elements (removes native default browser appearance) */
+@plugin "@tailwindcss/forms";
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: #4a1e22 ;
+  --color-primary-dark: #2e1215 ;
+  --color-secondary: white ;
+  --color-hover-c: #F7F1E8 ;
+  --color-hover-dark-c: #DED4C4 ;
+  --font-sans: var(--font-lato);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.nonselected-subsec {
+  color: gray;
+}
+
+.logo-title {
+  font-weight: 900;
+  font-style: italic;
+};
+
+.mbl-section-padding {
+  padding-top: 10px;
+  padding-bottom: 10px;
+};
+
+.sm-section-padding {
+  padding-top: 30px;
+  padding-bottom: 30px;
+};
+
+.md-section-padding {
+  padding-top: 60px;
+  padding-bottom: 60px;
+};
+
+.lg-section-padding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+};
+
+@keyframes hero-carousel-pan {
+  0%, 20%   { transform: translate(0, 0); }
+  25%, 45%  { transform: translate(-50%, 0); }
+  50%, 70%  { transform: translate(-50%, -50%); }
+  75%, 95%  { transform: translate(0, -50%); }
+  100%      { transform: translate(0, 0); }
+}
+
+.hero-carousel-pan {
+  animation: hero-carousel-pan 20s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-carousel-pan {
+    animation: none;
+  }
+}
+
+@keyframes testimonial-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.testimonial-track {
+  width: max-content;
+  animation: testimonial-scroll 40s linear infinite;
+}
+
+.testimonial-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-track {
+    animation: none;
+  }
 }
