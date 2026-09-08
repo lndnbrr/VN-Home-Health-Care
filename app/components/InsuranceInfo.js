@@ -1,22 +1,23 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function InsuranceInfo() {
 
   const insurances = [
-    {id: 1, iName: "Traditional Medicare", imgUrl: "https://ccmhg.com/wp-content/uploads/2013/01/medicare-logo-324x295.jpg"},
-    {id: 2, iName: "Blue Medicare Advantage", imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVpIVH3glN8PcCiKSocWd4JR6x2V47fecHBFPXth562yNdCea1pkCaRMI&s=10"},
-    {id: 3, iName: "Medicare Advantage", imgUrl: "https://www.retireguide.com/wp-content/uploads/Medicare-Advantage.png"},
-    {id: 4, iName: "Zing Medicare Health Plan", imgUrl: "https://www.myzinghealth.com/assets/zing_images/header/zing_health_logo.png"},
-    {id: 5, iName: "Blue Care Network (BCN)", imgUrl: "https://healthforlifegr.com/wp-content/uploads/2020/09/BCN-1.png"},
-    {id: 6, iName: "Blue Cross Blue Shield of Michigan - PPO", imgUrl: "https://www.forhealthinsurance.com/wp-content/uploads/2020/08/BCBS_Michigan-800x419-1.png"},
-    {id: 7, iName: "Medicare Plus Blue - PPO", imgUrl: "https://www.bcbsm.com/amslibs/content/dam/microsites/medicare/images/logo-medicare-plus-blue-ppo.jpg"},
-    {id: 8, iName: "Aetna Advantage - PPO", imgUrl: "https://cofop47.org/wp-content/uploads/2022/08/Aetna.jpg"},
-    {id: 9, iName: "Humana Advantage - PPO", imgUrl: "https://static.usaa.com/content/dam/digital/icons/logos/logo-humana-affiliate.png"},
-    {id: 10, iName: "Priority Health Advantage - PPO", imgUrl: "https://mms.businesswire.com/media/20240904141181/en/1728803/22/PriorityHealth-Logo-Stacked-Green.jpg"},
-    {id: 11, iName: "UnitedHealthcare - PPO", imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0lo4SR0ieVmw07OlQxZLDeQN9h4RgjXE22U4sKL2Xe_bi8t5opO4N0xs&s=10"},
-    {id: 12, iName: "Wellcare Advantage - PPO", imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvmKoOmVHMocqT4DIJs9oaetZ46LbyTOMzJGHinanWkFN_rqzgPPWyUWw&s=10"},
-    {id: 13, iName: "Auto Insurance", imgUrl: "https://img.magnific.com/premium-vector/auto-insurance-icon-line-art-logo-set_1223784-17685.jpg?semt=ais_hybrid&w=740&q=80"},
-    {id: 14, iName: "Private Payment", imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROh-xj4EMrBQXFBLr-ACY7tbkNyeJmziUmqTGVn6t2Hp8MtyRMBcOOnD4&s=10"}
+    {id: 1, iName: "Traditional Medicare", imgUrl: "/images/insurances_images/medicare-text.png"},
+    {id: 2, iName: "Blue Medicare Advantage", imgUrl: "/images/insurances_images/blue-medicare-advantage-text.png"},
+    {id: 3, iName: "Medicare Advantage", imgUrl: "/images/insurances_images/medicare-advantage-text.png"},
+    {id: 4, iName: "Zing Medicare Health Plan", imgUrl: "/images/insurances_images/zing-health-text.png"},
+    {id: 5, iName: "Blue Care Network (BCN)", imgUrl: "/images/insurances_images/blue-care-network-of-michigan-text.png"},
+    {id: 6, iName: "Blue Cross Blue Shield of Michigan - PPO", imgUrl: "/images/insurances_images/blue-cross-blue-shield-of-michigan-text.png"},
+    {id: 7, iName: "Medicare Plus Blue - PPO", imgUrl: "/images/insurances_images/medicare-plus-blue-blue-cross-blue-shield-of-michigan-text.png"},
+    {id: 8, iName: "Aetna Advantage - PPO", imgUrl: "/images/insurances_images/aetna-text.png"},
+    {id: 9, iName: "Humana Advantage - PPO", imgUrl: "/images/insurances_images/humana-text.png"},
+    {id: 10, iName: "Priority Health Advantage - PPO", imgUrl: "/images/insurances_images/priority-health-text.png"},
+    {id: 11, iName: "UnitedHealthcare - PPO", imgUrl: "/images/insurances_images/united-healthcare-text.png"},
+    {id: 12, iName: "Wellcare Advantage - PPO", imgUrl: "/images/insurances_images/wellcare-text.png"},
+    {id: 13, iName: "Auto Insurance", imgUrl: "/images/insurances_images/auto-insurance.jpeg"},
+    {id: 14, iName: "Private Payment", imgUrl: "/images/insurances_images/private-pay.jpeg"}
   ];
 
   return (
@@ -29,7 +30,7 @@ export default function InsuranceInfo() {
           {
             insurances.map((i)=>(
               <div key={i.id} className="basis-1/2 sm:basis-1/3 lg:basis-1/4 border border-primary-dark border-4 rounded-2xl p-4 flex flex-col items-center overflow-hidden">
-                <img alt={i.iName} className="w-full aspect-square object-contain" src={i.imgUrl}/>
+                <Image alt={i.iName} width={500} height={500} className="w-full aspect-square object-contain" src={i.imgUrl}/>
                 <p className="text-center text-sm text-primary-dark font-bold">{i.iName}</p>
               </div>
             ))
