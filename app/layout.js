@@ -10,6 +10,7 @@ const lato = Lato({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://vnhhc.com"),
   title: "VN Home Health Care",
   description: "A Medicare-certified home health care agency proudly serving Wayne and Oakland Counties and the city of Westland since 2007.",
 };
