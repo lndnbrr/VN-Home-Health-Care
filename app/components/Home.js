@@ -3,6 +3,7 @@ import WhyChooseUs from "./WhyChooseUs";
 import Image from "next/image";
 import ServiceArea from "./ServiceArea";
 import ServicePreview from "./servicesSubsections/ServicePreviews";
+import ReferPatientLink from "./ReferPatientLink";
 // import TestimonialSection from "./TestimonialSection";
 
 export default function Home() {
@@ -40,14 +41,8 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
-        <a
-          href="/documents/VNHHC_Face_to_Face_.pdf"
-          download
-          className="w-[80%] sm:w-auto text-center border-2 border-primary text-primary font-bold text-[4vw] sm:text-[2vw] px-6 py-3 rounded-md"
-        >
-          Refer a Patient
-        </a>
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6 mb-4">
+        <ReferPatientLink />
         <a
           href="tel:+12482543582"
           className="w-[80%] sm:w-auto text-center bg-primary text-secondary font-bold text-[4vw] sm:text-[2vw] px-6 py-3 rounded-md"

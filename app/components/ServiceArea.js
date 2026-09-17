@@ -6,9 +6,9 @@ export default function ServiceArea({ id }) {
       <h2 className="flex justify-center font-bold underline text-primary text-[4vw]">
         Service Areas
       </h2>
-      <div className="flex flex-col lg:flex-row lg:items-start gap-6 px-6 py-4 ">
+      <div className="flex flex-col lg:flex-row lg:items-start lg:justify-center gap-6 px-6 py-4 ">
         <Image src={"/images/landing_page_images/map_of_michigan.jpeg"} alt="Map of Michigan service area" width={550} height={550} className="w-full max-w-[350px] sm:max-w-[450px] md:w-[45vw] md:max-w-[550px] mx-auto lg:mx-0 lg:shrink-0 border-2 border-primary self-center"/>
-        <div>
+        <div className="lg:max-w-[700px]">
           <div className="flex flex-col items-center gap-4">
             <div className="flex flex-col items-center md:flex-row
    gap-4 justify-center md:justify-around">
@@ -78,9 +78,11 @@ export default function ServiceArea({ id }) {
                 </div>
             </div>
           </div>
-          <p className="pt-2 text-center text-2xl text-primary-dark font-bold">And everywhere in-between!</p>
-          <p className="text-primary pr-5 leading-tight">Our home health care services extend throughout Macomb County, Oakland County, and Wayne County, bringing compassionate, Medicare-certified care directly to your doorstep. Based in Farmington Hills, our team of dedicated caregivers travels to homes across both counties, ensuring quality care is accessible no matter where you or your loved one resides.</p> 
-          <p className="text-primary pr-2 leading-tight pt-2">Whether you&apos;re in a bustling city or a quiet suburban neighborhood, our mission is to deliver skilled nursing, rehabilitation therapy, and support services with convenience and compassion, right where you need them most. </p>
+          <div className="max-w-xl mx-auto">
+            <p className="pt-2 text-center text-2xl text-primary-dark font-bold">And everywhere in-between!</p>
+          <p className="text-primary leading-tight">Our home health care services extend throughout Macomb County, Oakland County, and Wayne County, bringing compassionate, Medicare-certified care directly to your doorstep. Based in Farmington Hills, our team of dedicated caregivers travels to homes across both counties, ensuring quality care is accessible no matter where you or your loved one resides.</p>
+          <p className="text-primary leading-tight pt-2">Whether you&apos;re in a bustling city or a quiet suburban neighborhood, our mission is to deliver skilled nursing, rehabilitation therapy, and support services with convenience and compassion, right where you need them most. </p>
+          </div>
         </div>
         
       </div>
