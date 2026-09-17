@@ -29,7 +29,7 @@ export default function InsuranceInfo() {
         <div className="flex flex-wrap justify-center gap-4">
           {
             insurances.map((i)=>(
-              <div key={i.id} className="basis-1/2 sm:basis-1/3 lg:basis-1/4 border border-primary-dark border-4 rounded-2xl p-4 flex flex-col items-center overflow-hidden">
+              <div key={i.id} className="basis-full sm:basis-1/3 lg:basis-1/4 border border-primary-dark border-4 rounded-2xl p-4 flex flex-col items-center overflow-hidden">
                 <Image alt={i.iName} width={500} height={500} className="w-full aspect-square object-contain" src={i.imgUrl}/>
                 <p className="text-center text-sm text-primary-dark font-bold">{i.iName}</p>
               </div>
