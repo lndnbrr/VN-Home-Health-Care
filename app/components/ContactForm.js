@@ -30,16 +30,16 @@ export default function ContactForm() {
   return (
     <section id="contact" className="mbl-section-padding sm:sm-section-padding md:md-section-padding lg:lg-section-padding pr-2 pl-2">
        <h2 className="flex justify-center font-bold underline text-primary text-[5vw]">Contact Form</h2>
-       <div className="w-[75%] mx-auto border-2 border-primary rounded-2xl p-5">
+       <div className="w-[90%] sm:w-[75%] md:w-[65%] lg:w-[50%] mx-auto border-2 border-primary rounded-2xl p-5">
         <form action={formAction} className="flex flex-col">
           <label className="font-bold text-primary mt-2">Name</label>
-          <input className="w-[40%] text-sm sm:text-base md:text-lg border border-primary-dark rounded-md px-3 py-2" name="name" id="name" value={vals.name} onChange={handleChange} type="text"/>
+          <input className="w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] text-sm sm:text-base md:text-lg border border-primary-dark rounded-md px-3 py-2" name="name" id="name" value={vals.name} onChange={handleChange} type="text"/>
 
           <label className="font-bold text-primary mt-2">Email Address</label>
-          <input className="w-[40%] text-sm sm:text-base md:text-lg border border-primary-dark rounded-md px-3 py-2" name="email" id="email" value={vals.email} onChange={handleChange} type="email"/>
+          <input className="w-[80%] sm:w-[60%] md:w-[55%] lg:w-[50%] text-sm sm:text-base md:text-lg border border-primary-dark rounded-md px-3 py-2" name="email" id="email" value={vals.email} onChange={handleChange} type="email"/>
 
           <label className="font-bold text-primary mt-2">Phone Number</label>
-          <input className="w-[30%] text-sm sm:text-base md:text-lg border border-primary-dark rounded-md px-3 py-2" name="phone" id="phone" value={vals.phone} onChange={handleChange} type="tel"/>
+          <input className="w-[65%] md:w-[50%] lg:w-[45%] text-sm sm:text-base md:text-lg border border-primary-dark rounded-md px-3 py-2" name="phone" id="phone" value={vals.phone} onChange={handleChange} type="tel"/>
 
           <label className="font-bold text-primary mt-2">Message</label>
           <textarea className="w-full text-sm sm:text-base md:text-lg border border-primary-dark rounded-md px-3 py-2 h-[200px]" name="message" id="message" value={vals.message} onChange={handleChange} type="text"/>
