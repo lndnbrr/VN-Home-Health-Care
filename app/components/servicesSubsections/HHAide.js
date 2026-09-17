@@ -204,7 +204,7 @@ export default function HHAide () {
         <p className="text-lg sm:text-xl mb-4">Home Health Aide may be right for you or a loved one if you are:</p>
         <ul className="list-inside space-y-1 text-lg">
           {whoItsFor.map((item) => (
-            <div key={item.description} className="flex flex-row border rounded-xl px-2 py-2 bg-primary text-hover-c">
+            <div key={item.description} className="flex flex-row items-center border rounded-xl px-2 py-2 bg-primary text-hover-c">
               <Image src={item.image} alt="Person default icon" width={150} height={150}/>
               <li className="self-center">{item.description}</li>
             </div>
