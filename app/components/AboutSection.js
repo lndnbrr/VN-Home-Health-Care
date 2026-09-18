@@ -50,10 +50,15 @@ export default function AboutSection() {
   ];
 
   return (
-    <div className="mbl-section-padding sm:sm-section-padding md:md-section-padding lg:lg-section-padding">
-
-      <div className="flex justify-center pt-8 sm:pt-8 md:pt-16 lg:pt-24">
-        <h1 className="text-5xl sm:text-6xl lg:text-[100px] font-bold underline text-primary">About Us</h1>
+    <div>
+      <div className="relative w-full h-96 overflow-hidden">
+        <Image src="/images/VNHHC-meet.png" alt="VN Home Health Care Team" fill priority className="object-cover object-[40%_35%]"/>
+        <div className="absolute inset-0 bg-black/70"/>
+        <div className="relative z-10 max-w-3xl mx-auto px-4 pt-8 sm:pt-8 md:pt-16 lg:pt-24 pb-8 sm:pb-8 md:pb-16 lg:pb-24 text-center">
+        <h1 className="text-5xl sm:text-6xl lg:text-[70px] font-bold underline text-secondary">
+        About Us
+          </h1>
+        </div>
       </div>
 
       <section id="our-story" className="py-8 sm:py-8 md:py-16 lg:py-24 px-4 sm:px-2 lg:px-2 max-w-5xl mx-auto">
@@ -81,8 +86,8 @@ export default function AboutSection() {
 
       <section id="our-team" className="py-8 sm:py-8 md:py-16 lg:py-24">
         <h2 className="mt-3 text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-dark px-4 sm:px-2 lg:px-2 max-w-5xl mx-auto">Our Administrator</h2>
-        <div className="mt-4 pt-8 pb-1 flex justify-center bg-primary w-full px-4">
-          <div className="flex-none w-full flex flex-col items-center gap-1 py-2">
+        <div className="mt-4 pt-8 pb-1 flex flex-col md:flex-row justify-center bg-primary w-full px-4">
+          <div className="flex-none flex flex-col items-center gap-1 py-2">
             <Image src={"/images/vidhya_jain_headshot_2026.png"} alt="Administrator" width={400} height={400} sizes={imageSize} className="max-w-full h-auto"/>
             <div className="flex flex-col items-center text-secondary text-center px-2">
               <div className="text-lg sm:text-xl md:text-2xl font-bold">Vidhya Jain</div>
@@ -92,6 +97,11 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
+            <div className="max-w-2xl self-center pl-5 pb-5 text-secondary sm:text-md md:text-lg lg:text-xl">
+              <p>Vidhya brings more than 25 years of combined healthcare experience as a therapist, administrator, and community health worker. Her career spans hospitals, outpatient care, durable medical equipment, nursing homes, hospice, and home care. This experience gives her a deep, current understanding of the healthcare landscape. She uses that knowledge to help clients bridge the gap between community resources, ancillary services, and chronic care management.</p>
+              <p className="py-3">Her academic background includes a degree in Health Administration from <i>Madonna University</i> and one in Occupational Therapy from <i>Schoolcraft College</i>. Together, they give her a rare blend of clinical insight and administrative rigor as a leader. She is also fluent in English, Hindi, Gujarati, Marwadi, and Tamil. This allows her to connect personally with the diverse communities she serves across metro Detroit.</p>
+              <p>Whether she&apos;s conducting chart audits, mentoring her team, or meeting with patients&apos; families, Vidhya is guided by one constant: treating everyone who comes through VN Home Health Care&apos;s doors with the dignity and attentiveness she&apos;d want for her own family.</p>
+            </div>
         </div>
       </section>
 
