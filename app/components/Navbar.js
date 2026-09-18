@@ -100,8 +100,8 @@ export default function Navbar() {
         </div>
 
         <Link href="/pages/insurance" className="text-center">Insurance Information</Link>
-        <Link href="/pages/contact" className="text-center">Contact Form</Link>
-        <Link href="/pages/faq" className="text-center">Frequently Asked Questions</Link>
+        <Link href="/pages/contact" className="text-center">Contact Us</Link>
+        <Link href="/pages/faq" className="text-center">FAQ</Link>
       </div>
 
       <div ref={mobileMenuRef} className="relative flex md:hidden ml-auto pr-6">
